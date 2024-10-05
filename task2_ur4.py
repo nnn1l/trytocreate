@@ -8,8 +8,7 @@ number_phone = input('Enter a phone number: ')
 
 if len(number_phone) != 10:
     print('Please enter 10 numbers.')
+elif not number_phone.isdigit():
+    print('The number phone cannot be converted to an integer.')
 else:
-    if not number_phone.isdigit():
-        print('The number phone cannot be converted to an integer.')
-    else:
-        print('Thank you!')
+    print('Thank you!')
