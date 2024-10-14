@@ -6,6 +6,6 @@
 text_example = input('Write an example of text: ')
 amount_chars = len(text_example)
 if amount_chars >= 2:
-    print(text_example[0] + text_example[1] + text_example[-2] + text_example[-1])
+    print(text_example[0:2] + text_example[-2:])
 else:
     print('Empty string')
