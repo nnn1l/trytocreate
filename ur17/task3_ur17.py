@@ -7,7 +7,7 @@ class Fraction:
         self.numerator = numerator
         self.denominator = denominator
 
-    def __add__(self, application): # Задає поведінку із знаком "+"
+    def __add__(self, application): # Задає поведінку із знаком "+"..
         if isinstance(application, Fraction):
             numerator, denominator = 0, 1
             if self.denominator == application.denominator: # Якщо знаменники однакові
