@@ -69,6 +69,10 @@ class Fraction:
 
         return NotImplemented
 
+    def __eq__(self, application):
+        if self.denominator == application.denominator and self.numerator == application.numerator:
+            return True
+        return False
 
 if __name__ == "__main__":
     x = Fraction(1, 2)
