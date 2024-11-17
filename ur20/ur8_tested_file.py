@@ -1,5 +1,5 @@
 def make_operation(operand, *args):
-    value1 = 0
+    value1= 0
     if operand == '+':
         for plus in args:
             value1 += plus

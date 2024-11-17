@@ -1,4 +1,4 @@
-#Pick your solution to one of the exercises in this module. Design tests for this solution and write tests using unittest library.
+#Pick your solution to one of the exercises in this module. Design tests for this solution and write tests using unittest library
 
 from ur8_tested_file import make_operation as tested
 import unittest

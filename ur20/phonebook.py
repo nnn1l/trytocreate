@@ -46,5 +46,5 @@ def update_record(phone_number, first_name, last_name, address):
 def exiting():
     with open(json_name, 'w+') as json_write:
         json.dump(phonebook, json_write)
-    print("Exiting...")
+    print("Exiting... ")
     exit()
