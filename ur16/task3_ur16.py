@@ -11,7 +11,7 @@ class ProductStore:
         self.basket = {}
         self.money = 0.0
 
-    def add(self, product: Product, amount: int): # - adds a specified quantity of a single product with a predefined price premium for your store(30 percent)
+    def add(self, product: Product, amount: int): # - adds a specified quantity of a single product with a predefined price premium for your store(30 percent).
         if not isinstance(product, Product) or amount <= 0:
             raise ValueError("Invalid product or amount.")
         increased_price = 1.3 * product.price
