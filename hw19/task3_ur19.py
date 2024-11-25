@@ -7,7 +7,7 @@ class CustomIterable:
     def __iter__(self): # Returns an iterator object. This method is called when iterating in a for-in loop.
         return iter(self.data)
 
-    def __getitem__(self, index): # Enables element retrieval using square brackets.
+    def __getitem__(self, index): # Enables element retrieval using square brackets
         return self.data[index]
 
 
