@@ -1,7 +1,7 @@
 # Create your own implementation of a built-in function range, named in_range(), which takes three parameters: 'start', 'end', and optional step.
 
 def in_range(start, end, step=1):
-    if not isinstance(start or end or step, int): # checks if all arguments are integers.
+    if not isinstance(start or end or step, int): # checks if all arguments are integers
         raise TypeError('All values must be integers')
 
     if step == 0:
