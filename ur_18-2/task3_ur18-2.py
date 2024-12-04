@@ -1,58 +1,62 @@
 import functools
 
 
-
 class TypeDecorators:
 
-    @classmethod
-    def to_int(cls, func):
+    @staticmethod
+    def to_int(func):
         @functools.wraps(func)
         def wrapper(*args):
-            index = -1
-            while index < len(args):
-                index += 1
-                if args[index].replace('-', '0').isnumeric() is True:
+            try:
+                index = -1
+                while index < len(args):
+                    index += 1
                     return int(args[index])
-                else:
-                    return args[index]
+            except ValueError:
+                return None
         return wrapper
 
-    @classmethod
-    def to_bool(cls, func):
+    @staticmethod
+    def to_bool(func):
         @functools.wraps(func)
         def wrapper(*args):
-            index = -1
-            while index < len(args):
-                index += 1
-                if args[index].lower() == 'true':
-                    return True
-                elif args[index].lower() == 'false':
-                    return False
-                else:
-                    return args[index]
+            try:
+                index = -1
+                while index < len(args):
+                    index += 1
+                    if str(args[index]).lower() == 'true':
+                        return True
+                    elif str(args[index]).lower() == 'false':
+                        return False
+            except ValueError:
+                return None
         return wrapper
 
-    @classmethod
-    def to_str(cls, func):
+    @staticmethod
+    def to_str(func):
         @functools.wraps(func)
         def wrapper(*args):
-            index = -1
-            while index < len(args):
-                index += 1
-                return str(args[index])
-        return wrapper
+            try:
+                index = -1
+                while index < len(args):
+                    index += 1
+                    return str(args[index])
+            except ValueError:
+                return None
+            return wrapper
 
-    @classmethod
-    def to_float(cls, func):
+    @staticmethod
+    def to_float(func):
         @functools.wraps(func)
         def wrapper(*args):
-            index = -1
-            while index < len(args):
-                index += 1
-                if args[index].replace('.', "0").replace('-', '0').isnumeric() is True:
+            try:
+                index = -1
+                while index < len(args):
+                    index += 1
                     return float(args[index])
-                else:
-                    return args[index]
+            except ValueError:
+                return None
+
         return wrapper
 
 
