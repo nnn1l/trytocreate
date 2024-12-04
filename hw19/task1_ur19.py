@@ -12,20 +12,20 @@ class WithIndex:
         return self
 
     def __next__(self):
-        self.list_result = []
-        while self.index < self.max_index:
-            if self.index < self.max_index:
-                result_tuple = (self.start, self.iterable[self.index])
-                self.index += 1
-                self.start += 1
-                self.list_result.append(result_tuple)
-            else:
-                raise StopIteration
-        return self.list_result
+        if self.index < self.max_index:
+            result_tuple = (self.start, self.iterable[self.index])
+            self.index += 1
+            self.start += 1
+        else:
+            raise StopIteration
+        return result_tuple
 
+x = WithIndex([1, 2, 3])
+for i in x:
+    print(i) #[(0, 1), (1, 2), (2, 3)]
 
-x = next(WithIndex([1, 2, 3]))
-print(x) #[(0, 1), (1, 2), (2, 3)]
+print('----' * 5)
 
-y = next(WithIndex([1, 2, 3, 4, 5, 6], 3))
-print(y) #[(3, 1), (4, 2), (5, 3), (6, 4), (7, 5), (8, 6)]
+y = WithIndex([1, 2, 3, 4, 5, 6], 3)
+for i in y:
+    print(i) #[(3, 1), (4, 2), (5, 3), (6, 4), (7, 5), (8, 6)]
