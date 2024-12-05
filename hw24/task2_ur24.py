@@ -1,5 +1,5 @@
 """
-Write a program that reads in a sequence of characters, and determines whether it's parentheses, braces, and curly brackets are "balanced."
+Write a program that reads in a sequence of characters, and determines whether it's parentheses, braces, and curly brackets are "balanced"
 """
 
 class Stack:
