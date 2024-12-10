@@ -146,4 +146,4 @@ double_linked_list.append_index_0(-1)
 #print(double_linked_list.index('r'))
 double_linked_list.insert(1, 4) # [-1, 0, 1, 2] -> [-1, 4, 0, 1, 2]
 print(double_linked_list)
-double_linked_list.slice(1, -1) #[4, 0, 1]
+double_linked_list.slice(1, -1) #[4, 0, 1]ю

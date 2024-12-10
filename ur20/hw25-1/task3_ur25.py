@@ -1,5 +1,5 @@
 """
-Implement a queue using a singly linked list.
+Implement a queue using a singly linked list
 """
 
 class Node:

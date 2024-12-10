@@ -1,5 +1,5 @@
 """
-Implement a stack using a singly linked list.
+Implement a stack using a singly linked list
 """
 
 class Node:
